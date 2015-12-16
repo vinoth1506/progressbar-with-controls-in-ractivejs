@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang='en-GB'>
+<head>
+  <meta charset='utf-8'>
+  <title>Ractive test</title>
+	<!-- Bootstrap css -->
+	<link href="css/lib/bootstrap.min.css" rel="stylesheet">
+	<link href="css/lib/bootstrap-theme.css" rel="stylesheet">
+	<!-- Custom css -->
+	<link href="css/project.css" rel="stylesheet">
+	<!-- Library Files JS -->
+	<script src="scripts/lib/jquery-1.11.0.min.js" type='text/javascript'></script>
+	<script src="scripts/lib/bootstrap.min.js" type='text/javascript'></script>
+	<script src='scripts/lib/ractive.min.js'></script>
+	<!-- Custom JS -->
+	<script src='scripts/project.js' type='text/javascript'></script>
+</head>
+<body> 
+	<script id="ractiveTemplate" type='text/ractive'>
+		<div id='container'>
+			<div class="progressbarWrapper"> 
+				<h1 class="h1">Ractive Test</h1> 
+				<div class="clear"></div>
+			</div>
+			<div class="progressbarWrapper"> 
+				<!-- Progressbar 01 -->
+				<div class="progress">
+				  <div class="progress-bar {{progressColor0}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress0}}%">
+					{{progress0}}%
+				  </div>
+				</div>
+				<!-- Progressbar 02 -->
+				<div class="progress">
+				  <div class="progress-bar {{progressColor1}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress1}}%">
+					{{progress1}}%
+				  </div>
+				</div> 
+				<!-- Progressbar 03 -->
+				<div class="progress">
+				  <div class="progress-bar {{progressColor2}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress2}}%">
+					{{progress2}}%
+				  </div>
+				</div>
+				<!-- Progressbar Selection -->
+				<div class="error" style="display:none;">
+					<p>Please select Progress Bar</p>
+				</div>
+				<select id="selProgressBar" class="form-control width100px">
+					<option selected disabled>- Please Select -</option>
+					{{#progressbars}}
+						<option value='{{id}}'>{{name}}</option>
+					{{/progressbars}}
+				</select>
+				<!-- Progressbar Buttons -->
+				<div class="btnGroup">
+					<button  class="btn btn-primary" on-click="prgsBarIncDec:{{'10'}},{{'plus'}}">+10</button>
+					<button  class="btn btn-success" on-click="prgsBarIncDec:{{'25'}},{{'plus'}}">+25</button>
+					<button class="btn btn-warning" on-click="prgsBarIncDec:{{'10'}},{{'minus'}}">-10</button>
+					<button class="btn btn-danger" on-click="prgsBarIncDec:{{'25'}},{{'minus'}}">-25</button>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</script>
+</body>
+</html>
