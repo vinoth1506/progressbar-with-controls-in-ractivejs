@@ -29,11 +29,33 @@
 	margin-bottom:20px;
 }
 .btnGroup{
-	width:100%;
-	float:left;
+	width:100%; 
 	clear:both;
+	display:table;
 }
-.btnGroup .btn{
-	width:24%;	
+.btnGroup ul{
+	width:100%; 
+	display:table-row;
+}
+.btnGroup ul li{ 
+	display:table-cell;
+	padding-right:10px;
+}
+.btnGroup ul li:last-child{ 
+	display:table-cell;
+	padding-right:0px;
+}
+.btnGroup ul li .btn{
+	width:100%;	
 } 
 .error p {font-size:11px; color:#cc2424; margin:0px;}
+.progress{
+	position:relative;
+}
+.progress span{
+	width:100%;
+	text-align:center;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
