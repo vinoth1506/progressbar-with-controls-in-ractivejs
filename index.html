@@ -25,21 +25,18 @@
 			<div class="progressbarWrapper"> 
 				<!-- Progressbar 01 -->
 				<div class="progress">
-				  <div class="progress-bar {{progressColor0}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress0}}%">
-					{{progress0}}%
-				  </div>
+				  <div class="progress-bar {{progressColor0}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress0}}%"></div>
+				  <span>{{progress0}}%</span>
 				</div>
 				<!-- Progressbar 02 -->
 				<div class="progress">
-				  <div class="progress-bar {{progressColor1}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress1}}%">
-					{{progress1}}%
-				  </div>
+					<div class="progress-bar {{progressColor1}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress1}}%"></div>
+					<span>{{progress1}}%</span>
 				</div> 
 				<!-- Progressbar 03 -->
 				<div class="progress">
-				  <div class="progress-bar {{progressColor2}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress2}}%">
-					{{progress2}}%
-				  </div>
+				  <div class="progress-bar {{progressColor2}} progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100"  style="width: {{progress2}}%"></div>
+				  <span>{{progress2}}%</span>
 				</div>
 				<!-- Progressbar Selection -->
 				<div class="error" style="display:none;">
@@ -53,10 +50,12 @@
 				</select>
 				<!-- Progressbar Buttons -->
 				<div class="btnGroup">
-					<button  class="btn btn-primary" on-click="prgsBarIncDec:{{'10'}},{{'plus'}}">+10</button>
-					<button  class="btn btn-success" on-click="prgsBarIncDec:{{'25'}},{{'plus'}}">+25</button>
-					<button class="btn btn-warning" on-click="prgsBarIncDec:{{'10'}},{{'minus'}}">-10</button>
-					<button class="btn btn-danger" on-click="prgsBarIncDec:{{'25'}},{{'minus'}}">-25</button>
+				<ul>
+					<li><button  class="btn btn-primary" on-click="prgsBarIncDec:{{'10'}},{{'plus'}}">+10</button></li>
+					<li><button  class="btn btn-success" on-click="prgsBarIncDec:{{'25'}},{{'plus'}}">+25</button></li>
+					<li><button class="btn btn-warning" on-click="prgsBarIncDec:{{'10'}},{{'minus'}}">-10</button></li>
+					<li><button class="btn btn-danger" on-click="prgsBarIncDec:{{'25'}},{{'minus'}}">-25</button></li>
+				</ul>
 				</div>
 				<div class="clear"></div>
 			</div>
